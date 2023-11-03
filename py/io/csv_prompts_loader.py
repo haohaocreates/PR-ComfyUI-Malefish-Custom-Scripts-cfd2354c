@@ -59,6 +59,7 @@ class CSVPromptsLoader():
         df = pd.read_csv(path, index_col=0, dtype={
                          "name": 'string', "styles": 'string', "face": 'string', "cloth": 'string', "action": 'string', "face_action": 'string', "environment": 'string'})
 
+        df.fillna("")
         if remove_extension == "On":
             key = os.path.splitext(key)[0]
 
