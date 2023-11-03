@@ -57,7 +57,7 @@ class CSVPromptsLoader():
             return ("", "", "", "", "",)
 
         df = pd.read_csv(path, index_col=0, dtype={
-                         "name": 'string', "styles": 'string', "face": 'string', "cloth": 'string', "action": 'string', "face_action": 'string'})
+                         "name": 'string', "styles": 'string', "face": 'string', "cloth": 'string', "action": 'string', "face_action": 'string', "environment": 'string'})
 
         if remove_extension == "On":
             key = os.path.splitext(key)[0]
@@ -68,4 +68,4 @@ class CSVPromptsLoader():
             logger.exception("Key is not exist")
             return ("", "", "", "", "",)
 
-        return (values['styles'], values['face'], values['cloth'], values['action'], values['face_action'],)
+        return (values['styles'], values['face'], values['cloth'], values['action'], values['face_action'], values['environment'])
