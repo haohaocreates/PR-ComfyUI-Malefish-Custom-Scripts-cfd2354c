@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-malefish-custom-scripts"
+description = "Nodes:Multi Lora Loader, Random (Prompt), Combine (Prompt), CSV Prompts Loader"
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["dynamicprompts", "pandas"]
+
+[project.urls]
+Repository = "https://github.com/ParmanBabra/ComfyUI-Malefish-Custom-Scripts"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Malefish-Custom-Scripts"
+Icon = ""
